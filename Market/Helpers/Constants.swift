@@ -53,6 +53,7 @@ public let kCURRENTUSER  = "currentUser"
 public let kFULLADDRESS  = "fullAddress"
 public let kONBOARD  = "onBoard"
 public let kPURCHASEDITEMIDS  = "purchasedItemIds"
+public let kPHONENUMBER = "phoneNumber"
 
 
 

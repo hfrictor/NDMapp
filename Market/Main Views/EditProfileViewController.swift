@@ -17,6 +17,10 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
+    
+    
     //MARK: - Vars
     let hud = JGProgressHUD(style: .dark)
 

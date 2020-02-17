@@ -17,6 +17,7 @@ class MUser {
     var lastName: String
     var fullName: String
     var purchasedItemIds: [String]
+    var phoneNumber: String
     
     var fullAddress: String?
     var onBoard: Bool
@@ -24,12 +25,13 @@ class MUser {
     
     //MARK: - Initializers
     
-    init(_objectId: String, _email: String, _firstName: String, _lastName: String) {
+    init(_objectId: String, _email: String, _firstName: String, _lastName: String, _phoneNumber: String) {
         
         objectId = _objectId
         email = _email
         firstName = _firstName
         lastName = _lastName
+        phoneNumber = _phoneNumber
         fullName = _firstName + " " + _lastName
         fullAddress = ""
         onBoard = false
@@ -60,10 +62,18 @@ class MUser {
         fullName = firstName + " " + lastName
         
         if let faddress = _dictionary[kFULLADDRESS] {
-           fullAddress = faddress as! String
+           phoneNumber = faddress as! String
+        } else {
+           phoneNumber = ""
+        }
+        
+        
+        if let pnumber = _dictionary[kPHONENUMBER] {
+            fullAddress = pnumber as? String
         } else {
            fullAddress = ""
         }
+        
         
         if let onB = _dictionary[kONBOARD] {
           onBoard = onB as! Bool
@@ -192,7 +202,7 @@ func downloadUserFromFirestore(userId: String, email: String) {
         } else {
             //there is no user, save new in firestore
             
-            let user = MUser(_objectId: userId, _email: email, _firstName: "", _lastName: "")
+            let user = MUser(_objectId: userId, _email: email, _firstName: "", _lastName: "", _phoneNumber: "")
             saveUserLocally(mUserDictionary: userDictionaryFrom(user: user))
             saveUserToFirestore(mUser: user)
         }
@@ -229,7 +239,7 @@ func saveUserLocally(mUserDictionary: NSDictionary) {
 
 func userDictionaryFrom(user: MUser) -> NSDictionary {
     
-    return NSDictionary(objects: [user.objectId, user.email, user.firstName, user.lastName, user.fullName, user.fullAddress ?? "", user.onBoard, user.purchasedItemIds], forKeys: [kOBJECTID as NSCopying, kEMAIL as NSCopying, kFIRSTNAME as NSCopying, kLASTNAME as NSCopying, kFULLNAME as NSCopying, kFULLADDRESS as NSCopying, kONBOARD as NSCopying, kPURCHASEDITEMIDS as NSCopying])
+    return NSDictionary(objects: [user.objectId, user.email, user.firstName, user.lastName, user.fullName, user.fullAddress, user.phoneNumber ?? "", user.onBoard, user.purchasedItemIds], forKeys: [kOBJECTID as NSCopying, kEMAIL as NSCopying, kFIRSTNAME as NSCopying, kLASTNAME as NSCopying, kFULLNAME as NSCopying, kFULLADDRESS as NSCopying, kPHONENUMBER as NSCopying, kONBOARD as NSCopying, kPURCHASEDITEMIDS as NSCopying])
 }
 
 //MARK: - Update user

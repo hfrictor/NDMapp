@@ -20,6 +20,10 @@ class FinishRegistrationViewController: UIViewController {
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var doneButtonOutlet: UIButton!
     
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
+    
+    
     //MARK: - Vars
     let hud = JGProgressHUD(style: .dark)
 
@@ -33,6 +37,7 @@ class FinishRegistrationViewController: UIViewController {
         nameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
         surnameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
         addressTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+        phoneNumberTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
     }
     
     
@@ -75,7 +80,7 @@ class FinishRegistrationViewController: UIViewController {
     
     private func finishOnboarding() {
         
-        let withValues = [kFIRSTNAME : nameTextField.text!, kLASTNAME : surnameTextField.text!, kONBOARD : true, kFULLADDRESS : addressTextField.text!, kFULLNAME : (nameTextField.text! + " " + surnameTextField.text!)] as [String : Any]
+        let withValues = [kFIRSTNAME : nameTextField.text!, kLASTNAME : surnameTextField.text!,kPHONENUMBER : phoneNumberTextField.text!, kONBOARD : true, kFULLADDRESS : addressTextField.text!, kFULLNAME : (nameTextField.text! + " " + surnameTextField.text!)] as [String : Any]
         
         
         updateCurrentUserInFirestore(withValues: withValues) { (error) in

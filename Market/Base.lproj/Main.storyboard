@@ -1119,7 +1119,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OF3-Bx-59m">
-                                <rect key="frame" x="16" y="206.33333333333334" width="343" height="30"/>
+                                <rect key="frame" x="16" y="278" width="343" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Done">
@@ -1129,20 +1129,28 @@
                                     <action selector="doneButtonPressed:" destination="sUf-eJ-qT7" eventType="touchUpInside" id="Ado-ev-PTG"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uK3-ze-5fb">
+                                <rect key="frame" x="16" y="200" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="duS-JR-eGc" firstAttribute="trailing" secondItem="uQ4-hR-uM5" secondAttribute="trailing" constant="16" id="1R0-5H-6nd"/>
                             <constraint firstItem="PAw-Fq-2Ku" firstAttribute="top" secondItem="uQ4-hR-uM5" secondAttribute="bottom" constant="8" id="3Xn-gv-OU0"/>
+                            <constraint firstItem="uK3-ze-5fb" firstAttribute="top" secondItem="PAw-Fq-2Ku" secondAttribute="bottom" constant="7.6699999999999999" id="5FS-6s-Eb1"/>
                             <constraint firstItem="U5P-mM-Lw1" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="97C-Xw-2sC"/>
                             <constraint firstItem="duS-JR-eGc" firstAttribute="trailing" secondItem="xGL-bD-dQU" secondAttribute="trailing" constant="16" id="CeV-6g-aCl"/>
                             <constraint firstItem="duS-JR-eGc" firstAttribute="trailing" secondItem="PAw-Fq-2Ku" secondAttribute="trailing" constant="16" id="Eio-Sc-Fut"/>
                             <constraint firstItem="NXG-tT-GFQ" firstAttribute="top" secondItem="duS-JR-eGc" secondAttribute="top" constant="20" id="JSk-A2-XVO"/>
+                            <constraint firstItem="OF3-Bx-59m" firstAttribute="top" secondItem="uK3-ze-5fb" secondAttribute="bottom" constant="44" id="KYW-sr-ih7"/>
                             <constraint firstItem="xGL-bD-dQU" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="KyQ-5N-eZC"/>
                             <constraint firstItem="duS-JR-eGc" firstAttribute="trailing" secondItem="OF3-Bx-59m" secondAttribute="trailing" constant="16" id="ODa-d4-mhJ"/>
                             <constraint firstItem="uQ4-hR-uM5" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="SyL-dU-j4O"/>
                             <constraint firstItem="PAw-Fq-2Ku" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="W58-FE-eC0"/>
-                            <constraint firstItem="OF3-Bx-59m" firstAttribute="top" secondItem="PAw-Fq-2Ku" secondAttribute="bottom" constant="14" id="ckk-jT-ot3"/>
+                            <constraint firstItem="uK3-ze-5fb" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="aQu-iO-4Qv"/>
+                            <constraint firstItem="duS-JR-eGc" firstAttribute="trailing" secondItem="uK3-ze-5fb" secondAttribute="trailing" constant="16" id="gjl-hO-V6P"/>
                             <constraint firstItem="uQ4-hR-uM5" firstAttribute="top" secondItem="xGL-bD-dQU" secondAttribute="bottom" constant="8" id="hdp-8H-fDQ"/>
                             <constraint firstItem="OF3-Bx-59m" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="p60-kH-IGA"/>
                             <constraint firstItem="NXG-tT-GFQ" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="rGv-hh-J3i"/>
@@ -1156,6 +1164,7 @@
                         <outlet property="addressTextField" destination="PAw-Fq-2Ku" id="cBm-TQ-TZq"/>
                         <outlet property="doneButtonOutlet" destination="OF3-Bx-59m" id="SBv-bS-QY8"/>
                         <outlet property="nameTextField" destination="xGL-bD-dQU" id="g8T-RI-JdP"/>
+                        <outlet property="phoneNumberTextField" destination="uK3-ze-5fb" id="Kgo-xV-8pe"/>
                         <outlet property="surnameTextField" destination="uQ4-hR-uM5" id="Bcm-9x-2OB"/>
                     </connections>
                 </viewController>
@@ -1176,7 +1185,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xep-gg-X0A">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xep-gg-X0A">
                                 <rect key="frame" x="16" y="150" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1197,6 +1206,12 @@
                                     <action selector="logOutButtonPressed:" destination="cOk-jh-PVw" eventType="touchUpInside" id="ZVF-KM-N9W"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7d-Uy-OjK">
+                                <rect key="frame" x="16" y="234" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1227,6 +1242,7 @@
                     <connections>
                         <outlet property="addressTextField" destination="Auu-vb-f2F" id="W1r-LD-pez"/>
                         <outlet property="nameTextField" destination="pq1-7s-HBd" id="Awt-qu-vDu"/>
+                        <outlet property="phoneNumberTextField" destination="k7d-Uy-OjK" id="vFv-79-P5r"/>
                         <outlet property="surnameTextField" destination="xep-gg-X0A" id="E3R-Fa-h1A"/>
                     </connections>
                 </viewController>
