@@ -2,8 +2,8 @@
 //  CategoryCollectionViewController.swift
 //  Market
 //
-//  Created by David Kababyan on 14/07/2019.
-//  Copyright © 2019 David Kababyan. All rights reserved.
+//  Created by Hayden Frea on 14/07/2019.
+//  Copyright © 2019 Hayden Frea. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ class CategoryCollectionViewController: UICollectionViewController {
     var categoryArray: [Category] = []
 
     private let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
-    private let itemsPerRow: CGFloat = 3
+    private let itemsPerRow: CGFloat = 2
     
     //MARK: View Lifecycle
 

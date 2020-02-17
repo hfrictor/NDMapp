@@ -2,8 +2,8 @@
 //  StripeClient.swift
 //  Market
 //
-//  Created by David Kababyan on 21/08/2019.
-//  Copyright © 2019 David Kababyan. All rights reserved.
+//  Created by Hayden Frea on 21/08/2019.
+//  Copyright © 2019 David Hayden Frea. All rights reserved.
 //
 
 import Foundation

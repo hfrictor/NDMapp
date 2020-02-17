@@ -76,13 +76,19 @@ func categoryDictionaryFrom(_ category: Category) -> NSDictionary {
 //use only one time
 func createCategorySet() {
 
-    let snacks = Category(_name: "Snacks", _imageName: "snacksPicture")
+    let snacks = Category(_name: "Chips", _imageName: "snacksPicture")
+    let candy = Category(_name: "Candy", _imageName: "snacksPicture")
     let drinks = Category(_name: "Drinks", _imageName: "drinksPicture")
     let toiletries = Category(_name: "Toiletries", _imageName: "ToiletriesPicture")
-    
+    let iceCream = Category(_name: "Ice Cream", _imageName: "iceCreamPicture")
+    let liquor = Category(_name: "Liquor", _imageName: "liquorPicture")
+    let medicine = Category(_name: "Medicine", _imageName: "medicinePicture")
+    let homeProducts = Category(_name: "Home Products", _imageName: "homePicture")
+    let healthy = Category(_name: "Healthy", _imageName: "healthyPicture")
+    let smoke = Category(_name: "Smokes", _imageName: "smokePicture")
     
 
-    let arrayOfCategories = [snacks, drinks, toiletries]
+    let arrayOfCategories = [snacks, drinks, toiletries, candy, iceCream, liquor, medicine, healthy, homeProducts, smoke]
 
     for category in arrayOfCategories {
         saveCategoryToFirebase(category)

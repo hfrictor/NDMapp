@@ -2,8 +2,8 @@
 //  FinishRegistrationViewController.swift
 //  Market
 //
-//  Created by David Kababyan on 03/08/2019.
-//  Copyright © 2019 David Kababyan. All rights reserved.
+//  Created by Hayden Frea on 03/08/2019.
+//  Copyright © 2019 Hayden Frea. All rights reserved.
 //
 
 import UIKit
@@ -63,7 +63,7 @@ class FinishRegistrationViewController: UIViewController {
         
         if nameTextField.text != "" && surnameTextField.text != "" && addressTextField.text != "" {
             
-            doneButtonOutlet.backgroundColor = #colorLiteral(red: 0.9998469949, green: 0.4941213727, blue: 0.4734867811, alpha: 1)
+            doneButtonOutlet.backgroundColor = #colorLiteral(red: 0.9771573604, green: 0.465426337, blue: 0.1832221476, alpha: 1)
             doneButtonOutlet.isEnabled = true
         } else {
             doneButtonOutlet.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
