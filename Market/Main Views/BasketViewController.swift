@@ -205,6 +205,8 @@ class BasketViewController: UIViewController {
                 self.emptyTheBasket()
                 self.addItemsToPurchaseHistory(self.purchasedItemIds)
                 self.showNotification(text: "Payment Successful", isError: false)
+                //I want it to send me an email with customer name, address, what they ordered and what time they ordered
+                
             } else {
                 self.showNotification(text: error!.localizedDescription, isError: true)
                 print("error ", error!.localizedDescription)

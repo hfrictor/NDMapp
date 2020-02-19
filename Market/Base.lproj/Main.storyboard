@@ -1108,7 +1108,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uQ4-hR-uM5">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uQ4-hR-uM5">
                                 <rect key="frame" x="16" y="116.33333333333331" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1118,8 +1118,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uK3-ze-5fb">
+                                <rect key="frame" x="16" y="200" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7A-z3-UNw">
+                                <rect key="frame" x="16" y="242" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OF3-Bx-59m">
-                                <rect key="frame" x="16" y="278" width="343" height="30"/>
+                                <rect key="frame" x="16" y="347" width="343" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Done">
@@ -1129,11 +1139,6 @@
                                     <action selector="doneButtonPressed:" destination="sUf-eJ-qT7" eventType="touchUpInside" id="Ado-ev-PTG"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uK3-ze-5fb">
-                                <rect key="frame" x="16" y="200" width="343" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1144,14 +1149,17 @@
                             <constraint firstItem="duS-JR-eGc" firstAttribute="trailing" secondItem="xGL-bD-dQU" secondAttribute="trailing" constant="16" id="CeV-6g-aCl"/>
                             <constraint firstItem="duS-JR-eGc" firstAttribute="trailing" secondItem="PAw-Fq-2Ku" secondAttribute="trailing" constant="16" id="Eio-Sc-Fut"/>
                             <constraint firstItem="NXG-tT-GFQ" firstAttribute="top" secondItem="duS-JR-eGc" secondAttribute="top" constant="20" id="JSk-A2-XVO"/>
-                            <constraint firstItem="OF3-Bx-59m" firstAttribute="top" secondItem="uK3-ze-5fb" secondAttribute="bottom" constant="44" id="KYW-sr-ih7"/>
                             <constraint firstItem="xGL-bD-dQU" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="KyQ-5N-eZC"/>
                             <constraint firstItem="duS-JR-eGc" firstAttribute="trailing" secondItem="OF3-Bx-59m" secondAttribute="trailing" constant="16" id="ODa-d4-mhJ"/>
                             <constraint firstItem="uQ4-hR-uM5" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="SyL-dU-j4O"/>
+                            <constraint firstItem="OF3-Bx-59m" firstAttribute="top" secondItem="x7A-z3-UNw" secondAttribute="bottom" constant="71" id="ULi-VX-ahx"/>
                             <constraint firstItem="PAw-Fq-2Ku" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="W58-FE-eC0"/>
                             <constraint firstItem="uK3-ze-5fb" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="aQu-iO-4Qv"/>
+                            <constraint firstItem="x7A-z3-UNw" firstAttribute="top" secondItem="uK3-ze-5fb" secondAttribute="bottom" constant="8" id="bXT-hW-8ns"/>
                             <constraint firstItem="duS-JR-eGc" firstAttribute="trailing" secondItem="uK3-ze-5fb" secondAttribute="trailing" constant="16" id="gjl-hO-V6P"/>
                             <constraint firstItem="uQ4-hR-uM5" firstAttribute="top" secondItem="xGL-bD-dQU" secondAttribute="bottom" constant="8" id="hdp-8H-fDQ"/>
+                            <constraint firstItem="x7A-z3-UNw" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="inc-b3-jQZ"/>
+                            <constraint firstItem="duS-JR-eGc" firstAttribute="trailing" secondItem="x7A-z3-UNw" secondAttribute="trailing" constant="16" id="ozz-kq-57v"/>
                             <constraint firstItem="OF3-Bx-59m" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="p60-kH-IGA"/>
                             <constraint firstItem="NXG-tT-GFQ" firstAttribute="leading" secondItem="duS-JR-eGc" secondAttribute="leading" constant="16" id="rGv-hh-J3i"/>
                             <constraint firstItem="xGL-bD-dQU" firstAttribute="top" secondItem="NXG-tT-GFQ" secondAttribute="bottom" constant="20.666666666666671" id="vlg-6X-Q2J"/>
@@ -1166,6 +1174,7 @@
                         <outlet property="nameTextField" destination="xGL-bD-dQU" id="g8T-RI-JdP"/>
                         <outlet property="phoneNumberTextField" destination="uK3-ze-5fb" id="Kgo-xV-8pe"/>
                         <outlet property="surnameTextField" destination="uQ4-hR-uM5" id="Bcm-9x-2OB"/>
+                        <outlet property="zipCodeTextField" destination="x7A-z3-UNw" id="QuC-9y-BDr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pc-uB-qad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1206,9 +1215,13 @@
                                     <action selector="logOutButtonPressed:" destination="cOk-jh-PVw" eventType="touchUpInside" id="ZVF-KM-N9W"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7d-Uy-OjK">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7d-Uy-OjK">
                                 <rect key="frame" x="16" y="234" width="343" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-KT-qPl">
+                                <rect key="frame" x="16" y="276" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -1217,9 +1230,12 @@
                         <constraints>
                             <constraint firstItem="xep-gg-X0A" firstAttribute="top" secondItem="pq1-7s-HBd" secondAttribute="bottom" constant="8" id="1JP-0d-Z7i"/>
                             <constraint firstItem="ZDR-HK-C62" firstAttribute="trailing" secondItem="zYw-eX-Aqe" secondAttribute="trailing" constant="16" id="48N-EA-z8P"/>
+                            <constraint firstItem="ZDR-HK-C62" firstAttribute="trailing" secondItem="k7d-Uy-OjK" secondAttribute="trailing" constant="16" id="92w-gB-ZCo"/>
                             <constraint firstItem="zYw-eX-Aqe" firstAttribute="centerY" secondItem="rIY-0q-W1k" secondAttribute="centerY" id="9Qq-FO-guM"/>
+                            <constraint firstItem="ZDR-HK-C62" firstAttribute="trailing" secondItem="NQd-KT-qPl" secondAttribute="trailing" constant="16" id="A4E-Jr-YKR"/>
                             <constraint firstItem="ZDR-HK-C62" firstAttribute="trailing" secondItem="Auu-vb-f2F" secondAttribute="trailing" constant="16" id="BGZ-LO-v5D"/>
                             <constraint firstItem="Auu-vb-f2F" firstAttribute="top" secondItem="xep-gg-X0A" secondAttribute="bottom" constant="8" id="BRd-rd-AtY"/>
+                            <constraint firstItem="NQd-KT-qPl" firstAttribute="leading" secondItem="ZDR-HK-C62" secondAttribute="leading" constant="16" id="C5z-Bu-isd"/>
                             <constraint firstItem="zYw-eX-Aqe" firstAttribute="centerX" secondItem="rIY-0q-W1k" secondAttribute="centerX" id="FlN-KR-bEX"/>
                             <constraint firstItem="Auu-vb-f2F" firstAttribute="leading" secondItem="ZDR-HK-C62" secondAttribute="leading" constant="16" id="Lwj-yX-aVn"/>
                             <constraint firstItem="xep-gg-X0A" firstAttribute="leading" secondItem="ZDR-HK-C62" secondAttribute="leading" constant="16" id="ORA-s8-jpi"/>
@@ -1227,6 +1243,9 @@
                             <constraint firstItem="pq1-7s-HBd" firstAttribute="top" secondItem="ZDR-HK-C62" secondAttribute="top" constant="20" id="cwN-st-x6z"/>
                             <constraint firstItem="zYw-eX-Aqe" firstAttribute="leading" secondItem="ZDR-HK-C62" secondAttribute="leading" constant="16" id="d85-ho-i2v"/>
                             <constraint firstItem="pq1-7s-HBd" firstAttribute="leading" secondItem="ZDR-HK-C62" secondAttribute="leading" constant="16" id="iTQ-LZ-hgf"/>
+                            <constraint firstItem="NQd-KT-qPl" firstAttribute="top" secondItem="k7d-Uy-OjK" secondAttribute="bottom" constant="8" id="ioi-9q-LaK"/>
+                            <constraint firstItem="k7d-Uy-OjK" firstAttribute="top" secondItem="Auu-vb-f2F" secondAttribute="bottom" constant="8" id="sO2-55-gOy"/>
+                            <constraint firstItem="k7d-Uy-OjK" firstAttribute="leading" secondItem="ZDR-HK-C62" secondAttribute="leading" constant="16" id="taQ-k6-FCX"/>
                             <constraint firstItem="ZDR-HK-C62" firstAttribute="trailing" secondItem="xep-gg-X0A" secondAttribute="trailing" constant="16" id="zOc-XM-3dm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZDR-HK-C62"/>
@@ -1244,6 +1263,7 @@
                         <outlet property="nameTextField" destination="pq1-7s-HBd" id="Awt-qu-vDu"/>
                         <outlet property="phoneNumberTextField" destination="k7d-Uy-OjK" id="vFv-79-P5r"/>
                         <outlet property="surnameTextField" destination="xep-gg-X0A" id="E3R-Fa-h1A"/>
+                        <outlet property="zipCodeTextField" destination="NQd-KT-qPl" id="5T7-ET-oEc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIZ-ei-lnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

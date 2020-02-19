@@ -2,8 +2,8 @@
 //  AddItemViewController.swift
 //  Market
 //
-//  Created by David Kababyan on 20/07/2019.
-//  Copyright © 2019 David Kababyan. All rights reserved.
+//  Created by Hayden Frea on 20/07/2019.
+//  Copyright © 2019 Hayden Frea. All rights reserved.
 //
 
 import UIKit

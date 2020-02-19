@@ -19,6 +19,7 @@ class EditProfileViewController: UIViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
+    @IBOutlet weak var zipCodeTextField: UITextField!
     
     
     //MARK: - Vars
@@ -42,7 +43,7 @@ class EditProfileViewController: UIViewController {
         
         if textFieldsHaveText() {
             
-            let withValues = [kFIRSTNAME : nameTextField.text!, kLASTNAME : surnameTextField.text!, kFULLNAME : (nameTextField.text! + " " + surnameTextField.text!), kFULLADDRESS : addressTextField.text!]
+            let withValues = [kFIRSTNAME : nameTextField.text!, kLASTNAME : surnameTextField.text!, kFULLNAME : (nameTextField.text! + " " + surnameTextField.text!), kFULLADDRESS : addressTextField.text!, kPHONENUMBER : phoneNumberTextField.text!, kZIPCODE : zipCodeTextField.text!]
             
             updateCurrentUserInFirestore(withValues: withValues) { (error) in
                 
@@ -87,6 +88,8 @@ class EditProfileViewController: UIViewController {
             nameTextField.text = currentUser.firstName
             surnameTextField.text = currentUser.lastName
             addressTextField.text = currentUser.fullAddress
+            phoneNumberTextField.text = currentUser.phoneNumber
+            zipCodeTextField.text = currentUser.zipCode
         }
     }
 

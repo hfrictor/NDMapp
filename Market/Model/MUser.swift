@@ -2,8 +2,8 @@
 //  MUser.swift
 //  Market
 //
-//  Created by David Kababyan on 01/08/2019.
-//  Copyright © 2019 David Kababyan. All rights reserved.
+//  Created by Hayden Frea on 01/08/2019.
+//  Copyright © 2019 Hayden Frea. All rights reserved.
 //
 
 import Foundation
@@ -18,6 +18,7 @@ class MUser {
     var fullName: String
     var purchasedItemIds: [String]
     var phoneNumber: String
+    var zipCode: String
     
     var fullAddress: String?
     var onBoard: Bool
@@ -25,13 +26,14 @@ class MUser {
     
     //MARK: - Initializers
     
-    init(_objectId: String, _email: String, _firstName: String, _lastName: String, _phoneNumber: String) {
+    init(_objectId: String, _email: String, _firstName: String, _lastName: String, _phoneNumber: String, _zipCode: String) {
         
         objectId = _objectId
         email = _email
         firstName = _firstName
         lastName = _lastName
         phoneNumber = _phoneNumber
+        zipCode = _zipCode
         fullName = _firstName + " " + _lastName
         fullAddress = ""
         onBoard = false
@@ -62,16 +64,22 @@ class MUser {
         fullName = firstName + " " + lastName
         
         if let faddress = _dictionary[kFULLADDRESS] {
-           phoneNumber = faddress as! String
+           fullAddress = faddress as! String
         } else {
-           phoneNumber = ""
+           fullAddress = ""
         }
         
         
         if let pnumber = _dictionary[kPHONENUMBER] {
-            fullAddress = pnumber as? String
+            phoneNumber = pnumber as! String
         } else {
-           fullAddress = ""
+           phoneNumber = ""
+        }
+        
+        if let zCode = _dictionary[kZIPCODE] {
+            zipCode = zCode as! String
+        } else {
+            zipCode = ""
         }
         
         
@@ -202,7 +210,7 @@ func downloadUserFromFirestore(userId: String, email: String) {
         } else {
             //there is no user, save new in firestore
             
-            let user = MUser(_objectId: userId, _email: email, _firstName: "", _lastName: "", _phoneNumber: "")
+            let user = MUser(_objectId: userId, _email: email, _firstName: "", _lastName: "", _phoneNumber: "", _zipCode: "")
             saveUserLocally(mUserDictionary: userDictionaryFrom(user: user))
             saveUserToFirestore(mUser: user)
         }
@@ -239,7 +247,7 @@ func saveUserLocally(mUserDictionary: NSDictionary) {
 
 func userDictionaryFrom(user: MUser) -> NSDictionary {
     
-    return NSDictionary(objects: [user.objectId, user.email, user.firstName, user.lastName, user.fullName, user.fullAddress, user.phoneNumber ?? "", user.onBoard, user.purchasedItemIds], forKeys: [kOBJECTID as NSCopying, kEMAIL as NSCopying, kFIRSTNAME as NSCopying, kLASTNAME as NSCopying, kFULLNAME as NSCopying, kFULLADDRESS as NSCopying, kPHONENUMBER as NSCopying, kONBOARD as NSCopying, kPURCHASEDITEMIDS as NSCopying])
+    return NSDictionary(objects: [user.objectId, user.email, user.firstName, user.lastName, user.fullName, user.fullAddress, user.phoneNumber, user.zipCode ?? "", user.onBoard, user.purchasedItemIds], forKeys: [kOBJECTID as NSCopying, kEMAIL as NSCopying, kFIRSTNAME as NSCopying, kLASTNAME as NSCopying, kFULLNAME as NSCopying, kFULLADDRESS as NSCopying, kPHONENUMBER as NSCopying, kONBOARD as NSCopying, kPURCHASEDITEMIDS as NSCopying, kZIPCODE as NSCopying])
 }
 
 //MARK: - Update user

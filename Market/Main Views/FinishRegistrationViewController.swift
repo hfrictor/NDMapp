@@ -22,6 +22,7 @@ class FinishRegistrationViewController: UIViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
+    @IBOutlet weak var zipCodeTextField: UITextField!
     
     
     //MARK: - Vars
@@ -38,6 +39,7 @@ class FinishRegistrationViewController: UIViewController {
         surnameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
         addressTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
         phoneNumberTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
+        zipCodeTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
     }
     
     
@@ -80,7 +82,7 @@ class FinishRegistrationViewController: UIViewController {
     
     private func finishOnboarding() {
         
-        let withValues = [kFIRSTNAME : nameTextField.text!, kLASTNAME : surnameTextField.text!,kPHONENUMBER : phoneNumberTextField.text!, kONBOARD : true, kFULLADDRESS : addressTextField.text!, kFULLNAME : (nameTextField.text! + " " + surnameTextField.text!)] as [String : Any]
+        let withValues = [kFIRSTNAME : nameTextField.text!, kLASTNAME : surnameTextField.text!,kPHONENUMBER : phoneNumberTextField.text!,kZIPCODE : zipCodeTextField.text!, kONBOARD : true, kFULLADDRESS : addressTextField.text!, kFULLNAME : (nameTextField.text! + " " + surnameTextField.text!)] as [String : Any]
         
         
         updateCurrentUserInFirestore(withValues: withValues) { (error) in
