@@ -133,6 +133,12 @@ class ItemViewController: UIViewController {
         }
     }
     
+       
+      
+    
+    
+    
+    
     
     //MARK: - Show login view
     

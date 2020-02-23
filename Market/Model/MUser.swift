@@ -64,7 +64,7 @@ class MUser {
         fullName = firstName + " " + lastName
         
         if let faddress = _dictionary[kFULLADDRESS] {
-           fullAddress = faddress as! String
+            fullAddress = faddress as? String
         } else {
            fullAddress = ""
         }
@@ -102,6 +102,8 @@ class MUser {
     class func currentId() -> String {
         return Auth.auth().currentUser!.uid
     }
+    
+    
     
     class func currentUser() -> MUser? {
         

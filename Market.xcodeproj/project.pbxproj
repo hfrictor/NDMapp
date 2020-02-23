@@ -40,6 +40,7 @@
 		55DB6E9322F75C7300E5603A /* PurchasedHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB6E9222F75C7300E5603A /* PurchasedHistoryTableViewController.swift */; };
 		55DD093A22EA2F880083339A /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD093922EA2F880083339A /* ImageCollectionViewCell.swift */; };
 		7144640A23F9CE6500A8F284 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7144640923F9CE6500A8F284 /* GoogleService-Info.plist */; };
+		718E766B2401EAD1002936B7 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718E766A2401EAD1002936B7 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		55DB6E9222F75C7300E5603A /* PurchasedHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedHistoryTableViewController.swift; sourceTree = "<group>"; };
 		55DD093922EA2F880083339A /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		7144640923F9CE6500A8F284 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		718E766A2401EAD1002936B7 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		924554B4BCF8E3811E139267 /* Pods-Market.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Market.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Market/Pods-Market.debug.xcconfig"; sourceTree = "<group>"; };
 		9FB7C5DA255E2E3E44F0A7B2 /* Pods_Market.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Market.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2DEB078B891A888B726F506 /* Pods-Market.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Market.release.xcconfig"; path = "Pods/Target Support Files/Pods-Market/Pods-Market.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				551F528922ECC6F000C87633 /* Basket.swift */,
 				556252C322FDEC0F00454B36 /* AlgoliaService.swift */,
 				55585D09230DBD2C00D33935 /* StripeClient.swift */,
+				718E766A2401EAD1002936B7 /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				55390AE922DBA062002CC575 /* Category.swift in Sources */,
 				5559184A22F36E03007C90F3 /* MUser.swift in Sources */,
 				5559184822F36B08007C90F3 /* WelcomeViewController.swift in Sources */,
+				718E766B2401EAD1002936B7 /* Order.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

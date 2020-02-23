@@ -10,6 +10,7 @@ import UIKit
 import JGProgressHUD
 import Stripe
 
+
 class BasketViewController: UIViewController {
 
     //MARK: - IBOutlets
@@ -24,8 +25,9 @@ class BasketViewController: UIViewController {
     //MARK: - Vars
     var basket: Basket?
     var allItems: [Item] = []
-    var purchasedItemIds : [String] = []
-    
+    var purchasedItemIds: [String] = []
+    //let currentUser = MUser.currentUser()!
+        
     let hud = JGProgressHUD(style: .dark)
     var totalPrice = 0
     
@@ -154,6 +156,31 @@ class BasketViewController: UIViewController {
         
         self.navigationController?.pushViewController(itemVC, animated: true)
     }
+    
+
+    
+    
+    //MARK: - Orders in Firebase
+    
+    
+    private func addOrderInFirebase() {
+        
+    if MUser.currentUser() != nil {
+        let currentUser = MUser.currentUser()!
+            let newOrder = Order()
+            newOrder.id = UUID().uuidString
+            newOrder.ownerId = MUser.currentId()
+            newOrder.name = currentUser.fullName
+            newOrder.itemIds = (basket!.itemIds)
+            saveOrderToFirestore(newOrder)
+        }
+            
+        
+    }
+    
+    
+    
+    
 
 
     //MARK: - Control checkoutButton
@@ -203,6 +230,7 @@ class BasketViewController: UIViewController {
             
             if error == nil {
                 self.emptyTheBasket()
+                self.addOrderInFirebase()
                 self.addItemsToPurchaseHistory(self.purchasedItemIds)
                 self.showNotification(text: "Payment Successful", isError: false)
                 //I want it to send me an email with customer name, address, what they ordered and what time they ordered
