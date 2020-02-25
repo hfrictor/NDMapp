@@ -171,6 +171,9 @@ class BasketViewController: UIViewController {
             newOrder.id = UUID().uuidString
             newOrder.ownerId = MUser.currentId()
             newOrder.name = currentUser.fullName
+            newOrder.address = currentUser.fullAddress
+            newOrder.zipCode = currentUser.zipCode
+            newOrder.phoneNumber = currentUser.phoneNumber
             newOrder.itemIds = (basket!.itemIds)
             saveOrderToFirestore(newOrder)
         }
@@ -229,10 +232,10 @@ class BasketViewController: UIViewController {
         StripeClient.sharedClient.createAndConfirmPayment(token, amount: totalPrice) { (error) in
             
             if error == nil {
-                self.emptyTheBasket()
                 self.addOrderInFirebase()
                 self.addItemsToPurchaseHistory(self.purchasedItemIds)
                 self.showNotification(text: "Payment Successful", isError: false)
+                self.emptyTheBasket()
                 //I want it to send me an email with customer name, address, what they ordered and what time they ordered
                 
             } else {

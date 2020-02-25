@@ -15,6 +15,9 @@ class Order {
     var ownerId: String!
     var itemIds: [String]!
     var name: String!
+    var address: String!
+    var zipCode: String!
+    var phoneNumber: String!
     
     init() {
     }
@@ -24,7 +27,9 @@ class Order {
         ownerId = _dictionary[kOWNERID] as? String
         itemIds = _dictionary[kITEMIDS] as? [String]
         name = _dictionary[kFULLNAME] as? String
-        
+        address = _dictionary[kFULLADDRESS] as? String
+        zipCode = _dictionary[kZIPCODE] as? String
+        phoneNumber = _dictionary[kPHONENUMBER] as? String
     }
 }
 
@@ -61,7 +66,7 @@ func saveOrderToFirestore(_ order: Order) {
 
 func orderDictionaryFrom(_ order: Order) -> NSDictionary {
     
-    return NSDictionary(objects: [order.id, order.ownerId, order.itemIds, order.name], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kITEMIDS as NSCopying, kFULLNAME as NSCopying])
+    return NSDictionary(objects: [order.id, order.ownerId, order.itemIds, order.name, order.address, order.zipCode, order.phoneNumber], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kITEMIDS as NSCopying, kFULLNAME as NSCopying, kFULLADDRESS as NSCopying, kZIPCODE as NSCopying, kPHONENUMBER as NSCopying])
 }
 
 //MARK: - Update basket
