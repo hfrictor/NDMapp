@@ -26,6 +26,9 @@ class BasketViewController: UIViewController {
     var basket: Basket?
     var allItems: [Item] = []
     var purchasedItemIds: [String] = []
+    var orderEmail: String = "haydenfrea@gmail.com"
+    var orderMessage: String = ""
+    var orderSubject: String = "ORDER NEEDS FILLED"
     //let currentUser = MUser.currentUser()!
         
     let hud = JGProgressHUD(style: .dark)
@@ -175,6 +178,9 @@ class BasketViewController: UIViewController {
             newOrder.zipCode = currentUser.zipCode
             newOrder.phoneNumber = currentUser.phoneNumber
             newOrder.itemIds = (basket!.itemIds)
+            newOrder.myEmail = orderEmail
+            newOrder.myMessage = orderMessage
+            newOrder.mySubject = orderSubject
             saveOrderToFirestore(newOrder)
         }
             

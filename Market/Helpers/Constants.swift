@@ -57,4 +57,10 @@ public let kPHONENUMBER = "phoneNumber"
 public let kZIPCODE = "zipCode"
 
 
+//Email Links for oders
+public let kMYEMAIL = "to"
+public let kMYMESSAGE = "message"
+public let kMYSUBJECT = "subject"
+
+
 
