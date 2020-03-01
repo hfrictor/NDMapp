@@ -26,8 +26,8 @@ class BasketViewController: UIViewController {
     var basket: Basket?
     var allItems: [Item] = []
     var purchasedItemIds: [String] = []
-    var orderEmail: String = "haydenfrea@gmail.com"
-    var orderMessage: String = ""
+    var orderEmail: String = "nextdoormunch@gmail.com"
+    var orderMessage: String = "Hello there from NextDoorMunch"
     var orderSubject: String = "ORDER NEEDS FILLED"
     //let currentUser = MUser.currentUser()!
         
@@ -122,7 +122,7 @@ class BasketViewController: UIViewController {
         
         basket!.itemIds = []
         
-        updateBasketInFirestore(basket!, withValues: [kITEMIDS : basket!.itemIds]) { (error) in
+        updateBasketInFirestore(basket!, withValues: [kITEMIDS : basket!.itemIds as Any]) { (error) in
             
             if error != nil {
                 print("Error updating basket ", error!.localizedDescription)
@@ -175,15 +175,16 @@ class BasketViewController: UIViewController {
             newOrder.ownerId = MUser.currentId()
             newOrder.name = currentUser.fullName
             newOrder.address = currentUser.fullAddress
-            newOrder.zipCode = currentUser.zipCode
+            //newOrder.zipCode = currentUser.zipCode
             newOrder.phoneNumber = currentUser.phoneNumber
             newOrder.itemIds = (basket!.itemIds)
             newOrder.myEmail = orderEmail
             newOrder.myMessage = orderMessage
             newOrder.mySubject = orderSubject
             saveOrderToFirestore(newOrder)
+       
         }
-            
+        
         
     }
     

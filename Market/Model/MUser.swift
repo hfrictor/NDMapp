@@ -18,7 +18,7 @@ class MUser {
     var fullName: String
     var purchasedItemIds: [String]
     var phoneNumber: String
-    var zipCode: String
+    //var zipCode: String
     
     var fullAddress: String?
     var onBoard: Bool
@@ -26,14 +26,14 @@ class MUser {
     
     //MARK: - Initializers
     
-    init(_objectId: String, _email: String, _firstName: String, _lastName: String, _phoneNumber: String, _zipCode: String) {
+    init(_objectId: String, _email: String, _firstName: String, _lastName: String, _phoneNumber: String) {
         
         objectId = _objectId
         email = _email
         firstName = _firstName
         lastName = _lastName
         phoneNumber = _phoneNumber
-        zipCode = _zipCode
+        //zipCode = _zipCode
         fullName = _firstName + " " + _lastName
         fullAddress = ""
         onBoard = false
@@ -76,24 +76,25 @@ class MUser {
            phoneNumber = ""
         }
         
-        if let zCode = _dictionary[kZIPCODE] {
-            zipCode = zCode as! String
-        } else {
-            zipCode = ""
-        }
-        
-        
         if let onB = _dictionary[kONBOARD] {
-          onBoard = onB as! Bool
-        } else {
-          onBoard = false
-        }
+           onBoard = onB as! Bool
+         } else {
+           onBoard = false
+         }
 
-        if let purchaseIds = _dictionary[kPURCHASEDITEMIDS] {
-         purchasedItemIds = purchaseIds as! [String]
-       } else {
-         purchasedItemIds = []
-       }
+         if let purchaseIds = _dictionary[kPURCHASEDITEMIDS] {
+          purchasedItemIds = purchaseIds as! [String]
+        } else {
+          purchasedItemIds = []
+        }
+        
+        //if let zcode = _dictionary[kZIPCODE] {
+            //zipCode = zcode as! String
+        //} else {
+          //  zipCode = ""
+        //}
+        
+       
     }
     
     
@@ -130,7 +131,7 @@ class MUser {
                     completion(error, true)
                 } else {
                     
-                    print("email is not varified")
+                    print("email is not verified")
                     completion(error, false)
                 }
                 
@@ -212,7 +213,7 @@ func downloadUserFromFirestore(userId: String, email: String) {
         } else {
             //there is no user, save new in firestore
             
-            let user = MUser(_objectId: userId, _email: email, _firstName: "", _lastName: "", _phoneNumber: "", _zipCode: "")
+            let user = MUser(_objectId: userId, _email: email, _firstName: "", _lastName: "", _phoneNumber: "")
             saveUserLocally(mUserDictionary: userDictionaryFrom(user: user))
             saveUserToFirestore(mUser: user)
         }
@@ -249,7 +250,7 @@ func saveUserLocally(mUserDictionary: NSDictionary) {
 
 func userDictionaryFrom(user: MUser) -> NSDictionary {
     
-    return NSDictionary(objects: [user.objectId, user.email, user.firstName, user.lastName, user.fullName, user.fullAddress, user.phoneNumber, user.zipCode ?? "", user.onBoard, user.purchasedItemIds], forKeys: [kOBJECTID as NSCopying, kEMAIL as NSCopying, kFIRSTNAME as NSCopying, kLASTNAME as NSCopying, kFULLNAME as NSCopying, kFULLADDRESS as NSCopying, kPHONENUMBER as NSCopying, kONBOARD as NSCopying, kPURCHASEDITEMIDS as NSCopying, kZIPCODE as NSCopying])
+    return NSDictionary(objects: [user.objectId, user.email, user.firstName, user.lastName, user.fullName, user.fullAddress!, user.phoneNumber, user.onBoard, user.purchasedItemIds], forKeys: [kOBJECTID as NSCopying, kEMAIL as NSCopying, kFIRSTNAME as NSCopying, kLASTNAME as NSCopying, kFULLNAME as NSCopying, kFULLADDRESS as NSCopying, kPHONENUMBER as NSCopying, kONBOARD as NSCopying, kPURCHASEDITEMIDS as NSCopying])
 }
 
 //MARK: - Update user

@@ -81,7 +81,7 @@ func createCategorySet() {
     let drinks = Category(_name: "Drinks", _imageName: "drinksPicture")
     let toiletries = Category(_name: "Toiletries", _imageName: "ToiletriesPicture")
     let iceCream = Category(_name: "Ice Cream", _imageName: "iceCreamPicture")
-    let liquor = Category(_name: "Liquor", _imageName: "liquorPicture")
+    let liquor = Category(_name: "Alcohol", _imageName: "liquorPicture")
     let medicine = Category(_name: "Medicine", _imageName: "medicinePicture")
     let homeProducts = Category(_name: "Home Products", _imageName: "homePicture")
     let healthy = Category(_name: "Healthy", _imageName: "healthyPicture")

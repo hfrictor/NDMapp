@@ -15,15 +15,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NDM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLq-gD-hnc">
-                                <rect key="frame" x="101" y="391" width="213" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NDM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLq-gD-hnc">
+                                <rect key="frame" x="119" y="391" width="176" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wLq-gD-hnc" secondAttribute="height" multiplier="176:115" id="570-kG-x2A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="78"/>
                                 <color key="textColor" red="0.97715736040000001" green="0.46542633700000002" blue="0.1832221476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wLq-gD-hnc" firstAttribute="top" secondItem="km8-AJ-LZV" secondAttribute="top" constant="347" id="CX2-7Y-JH7"/>
+                            <constraint firstItem="km8-AJ-LZV" firstAttribute="trailing" secondItem="wLq-gD-hnc" secondAttribute="trailing" constant="119" id="PUn-Wt-fE5"/>
+                            <constraint firstItem="wLq-gD-hnc" firstAttribute="leading" secondItem="km8-AJ-LZV" secondAttribute="leading" constant="119" id="e9f-CS-syH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="km8-AJ-LZV"/>
                     </view>
                 </viewController>

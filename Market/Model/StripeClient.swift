@@ -30,7 +30,7 @@ class StripeClient {
         
         let params: [String : Any] = ["stripeToken" : token.tokenId, "amount" : amount, "description" : Constats.defaultDescription, "currency" : Constats.defaultCurrency]
         
-        Alamofire.request(url, method: .post, parameters: params)
+        AF.request(url, method: .post, parameters: params)
             .validate(statusCode: 200..<300)
             .responseData(completionHandler: { (response) in
                 

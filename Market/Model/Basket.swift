@@ -14,6 +14,7 @@ class Basket {
     var id: String!
     var ownerId: String!
     var itemIds: [String]!
+   
     
     init() {
     }
@@ -22,6 +23,7 @@ class Basket {
         id = _dictionary[kOBJECTID] as? String
         ownerId = _dictionary[kOWNERID] as? String
         itemIds = _dictionary[kITEMIDS] as? [String]
+      
     }
 }
 
