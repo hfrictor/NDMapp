@@ -16,10 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NDM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLq-gD-hnc">
-                                <rect key="frame" x="119" y="391" width="176" height="115"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="wLq-gD-hnc" secondAttribute="height" multiplier="176:115" id="570-kG-x2A"/>
-                                </constraints>
+                                <rect key="frame" x="119" y="391" width="176" height="93.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="78"/>
                                 <color key="textColor" red="0.97715736040000001" green="0.46542633700000002" blue="0.1832221476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
