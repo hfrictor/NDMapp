@@ -3,7 +3,7 @@
 //  Market
 //
 //  Created by Hayden Frea on 21/08/2019.
-//  Copyright © 2019 David Hayden Frea. All rights reserved.
+//  Copyright © 2019 Hayden Frea. All rights reserved.
 //
 
 import Foundation
@@ -18,10 +18,12 @@ class StripeClient {
     
     var baseURL: URL {
         if let urlString = self.baseURLString, let url = URL(string: urlString) {
+            print(url)
             return url
         } else {
             fatalError()
         }
+       
     }
     
     func createAndConfirmPayment(_ token: STPToken, amount: Int, completion: @escaping (_ error: Error?) -> Void) {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		530F4008E37D3A87F4B6EDCB /* Pods_Market.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB7C5DA255E2E3E44F0A7B2 /* Pods_Market.framework */; };
 		550231A822E4EA28002F0381 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550231A722E4EA28002F0381 /* ItemTableViewCell.swift */; };
 		550231AA22E4EFA6002F0381 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550231A922E4EFA6002F0381 /* HelperFunctions.swift */; };
 		55028EAF22DB4AAB00D7D60B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55028EAE22DB4AAB00D7D60B /* AppDelegate.swift */; };
@@ -39,11 +38,13 @@
 		55DB6E9122F7547B00E5603A /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB6E9022F7547B00E5603A /* EditProfileViewController.swift */; };
 		55DB6E9322F75C7300E5603A /* PurchasedHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB6E9222F75C7300E5603A /* PurchasedHistoryTableViewController.swift */; };
 		55DD093A22EA2F880083339A /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD093922EA2F880083339A /* ImageCollectionViewCell.swift */; };
+		562004F05B06F1ABB06D6CB8 /* Pods_Market.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F784189F1623FDA22C02A225 /* Pods_Market.framework */; };
 		7144640A23F9CE6500A8F284 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7144640923F9CE6500A8F284 /* GoogleService-Info.plist */; };
 		718E766B2401EAD1002936B7 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718E766A2401EAD1002936B7 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FA494F8D66217C1CA8D5C1C /* Pods-Market.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Market.debug.xcconfig"; path = "Target Support Files/Pods-Market/Pods-Market.debug.xcconfig"; sourceTree = "<group>"; };
 		550231A722E4EA28002F0381 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		550231A922E4EFA6002F0381 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		55028EAB22DB4AAB00D7D60B /* NextDoorMunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextDoorMunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,9 +81,8 @@
 		55DD093922EA2F880083339A /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		7144640923F9CE6500A8F284 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		718E766A2401EAD1002936B7 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		924554B4BCF8E3811E139267 /* Pods-Market.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Market.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Market/Pods-Market.debug.xcconfig"; sourceTree = "<group>"; };
-		9FB7C5DA255E2E3E44F0A7B2 /* Pods_Market.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Market.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2DEB078B891A888B726F506 /* Pods-Market.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Market.release.xcconfig"; path = "Pods/Target Support Files/Pods-Market/Pods-Market.release.xcconfig"; sourceTree = "<group>"; };
+		C97154CC8209BE3D298E06D8 /* Pods-Market.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Market.release.xcconfig"; path = "Target Support Files/Pods-Market/Pods-Market.release.xcconfig"; sourceTree = "<group>"; };
+		F784189F1623FDA22C02A225 /* Pods_Market.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Market.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,20 +90,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				530F4008E37D3A87F4B6EDCB /* Pods_Market.framework in Frameworks */,
+				562004F05B06F1ABB06D6CB8 /* Pods_Market.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		025F844E37214A261F57FFAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FA494F8D66217C1CA8D5C1C /* Pods-Market.debug.xcconfig */,
+				C97154CC8209BE3D298E06D8 /* Pods-Market.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2C04C71340C8FD5E376208E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F784189F1623FDA22C02A225 /* Pods_Market.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		55028EA222DB4AAB00D7D60B = {
 			isa = PBXGroup;
 			children = (
 				55028EAD22DB4AAB00D7D60B /* Market */,
 				55028EAC22DB4AAB00D7D60B /* Products */,
-				ABA773248E5948BE27F9024A /* Pods */,
-				A5104EB41D273879786D419F /* Frameworks */,
+				025F844E37214A261F57FFAC /* Pods */,
+				2C04C71340C8FD5E376208E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,23 +215,6 @@
 			name = "Login View";
 			sourceTree = "<group>";
 		};
-		A5104EB41D273879786D419F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9FB7C5DA255E2E3E44F0A7B2 /* Pods_Market.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		ABA773248E5948BE27F9024A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				924554B4BCF8E3811E139267 /* Pods-Market.debug.xcconfig */,
-				D2DEB078B891A888B726F506 /* Pods-Market.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,11 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55028EBF22DB4AAC00D7D60B /* Build configuration list for PBXNativeTarget "Market" */;
 			buildPhases = (
-				C69C8569B1BAA4BA9A6816E0 /* [CP] Check Pods Manifest.lock */,
+				4646EFF97A7CDBC104CB043E /* [CP] Check Pods Manifest.lock */,
 				55028EA722DB4AAB00D7D60B /* Sources */,
 				55028EA822DB4AAB00D7D60B /* Frameworks */,
 				55028EA922DB4AAB00D7D60B /* Resources */,
-				9A1D802BC984E25911E7C0D1 /* [CP] Embed Pods Frameworks */,
+				40E683681845F697EB2170A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,7 +286,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9A1D802BC984E25911E7C0D1 /* [CP] Embed Pods Frameworks */ = {
+		40E683681845F697EB2170A1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,7 +303,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Market/Pods-Market-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C69C8569B1BAA4BA9A6816E0 /* [CP] Check Pods Manifest.lock */ = {
+		4646EFF97A7CDBC104CB043E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -501,7 +502,7 @@
 		};
 		55028EC022DB4AAC00D7D60B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 924554B4BCF8E3811E139267 /* Pods-Market.debug.xcconfig */;
+			baseConfigurationReference = 1FA494F8D66217C1CA8D5C1C /* Pods-Market.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -525,7 +526,7 @@
 		};
 		55028EC122DB4AAC00D7D60B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2DEB078B891A888B726F506 /* Pods-Market.release.xcconfig */;
+			baseConfigurationReference = C97154CC8209BE3D298E06D8 /* Pods-Market.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

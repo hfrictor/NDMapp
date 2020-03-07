@@ -12,7 +12,7 @@ enum Constats {
     static let publishableKey = "pk_test_UWsdGZyqNMj9qo3pEjHLEESW00G576rUAl"
     static let baseURLString = "https://nextdoormunch.herokuapp.com/"
     static let defaultCurrency = "usd"
-    static let defaultDescription = "Purchase from Market"
+    static let defaultDescription = "Purchase from NextDoorMunch App"
 }
 
 //IDS and Keys
