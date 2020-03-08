@@ -46,7 +46,7 @@ func saveItemToFirestore(_ item: Item) {
 
 func itemDictionaryFrom(_ item: Item) -> NSDictionary {
     
-    return NSDictionary(objects: [item.id, item.categoryId, item.name, item.description, item.price, item.imageLinks], forKeys: [kOBJECTID as NSCopying, kCATEGORYID as NSCopying, kNAME as NSCopying, kDESCRIPTION as NSCopying, kPRICE as NSCopying, kIMAGELINKS as NSCopying])
+    return NSDictionary(objects: [item.id!, item.categoryId!, item.name!, item.description!, item.price!, item.imageLinks!], forKeys: [kOBJECTID as NSCopying, kCATEGORYID as NSCopying, kNAME as NSCopying, kDESCRIPTION as NSCopying, kPRICE as NSCopying, kIMAGELINKS as NSCopying])
 }
 
 

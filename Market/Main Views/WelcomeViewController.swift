@@ -95,7 +95,7 @@ class WelcomeViewController: UIViewController {
         
         MUser.resendVerificationEmail(email: emailTextField.text!) { (error) in
             
-            print("error resending email", error?.localizedDescription)
+            print("error resending email", error?.localizedDescription as Any)
         }
         
     }

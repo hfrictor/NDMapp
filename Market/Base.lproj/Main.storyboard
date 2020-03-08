@@ -966,7 +966,10 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jr1-R6-k4c">
                                                     <rect key="frame" x="16" y="7" width="324.66666666666669" height="30"/>
-                                                    <state key="normal" title="Terms &amp; Conditions"/>
+                                                    <state key="normal" title="Privacy Policy"/>
+                                                    <connections>
+                                                        <action selector="privacyPolicyButton:" destination="ONL-Wq-3Wv" eventType="touchUpInside" id="Ke1-wJ-QfP"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

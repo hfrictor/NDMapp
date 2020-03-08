@@ -154,7 +154,7 @@ class MUser {
                 
                 //send email verification
                 authDataResult!.user.sendEmailVerification { (error) in
-                    print("auth email verification error : ", error?.localizedDescription)
+                    print("auth email verification error : ", error?.localizedDescription as Any)
                 }
             }
         }
@@ -175,7 +175,7 @@ class MUser {
         Auth.auth().currentUser?.reload(completion: { (error) in
             
             Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
-                print(" resend email error: ", error?.localizedDescription)
+                print(" resend email error: ", error?.localizedDescription as Any)
                 
                 completion(error)
             })

@@ -72,7 +72,7 @@ func saveOrderToFirestore(_ order: Order) {
 
 func orderDictionaryFrom(_ order: Order) -> NSDictionary {
     
-    return NSDictionary(objects: [order.id!, order.ownerId!, order.itemIds!, order.name, order.address!, order.zipCode!, order.phoneNumber!, order.myEmail ?? "haydenfrea@gmail.com", order.myMessage!, order.mySubject!], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kITEMIDS as NSCopying, kFULLNAME as NSCopying, kFULLADDRESS as NSCopying, kZIPCODE as NSCopying, kPHONENUMBER as NSCopying, kMYEMAIL as NSCopying, kMYMESSAGE as NSCopying, kMYSUBJECT as NSCopying])
+    return NSDictionary(objects: [order.id!, order.ownerId!, order.itemIds!, order.name!, order.address!, order.zipCode ?? "00000", order.phoneNumber!, order.myEmail ?? "haydenfrea@gmail.com", order.myMessage!, order.mySubject!], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kITEMIDS as NSCopying, kFULLNAME as NSCopying, kFULLADDRESS as NSCopying, kZIPCODE as NSCopying, kPHONENUMBER as NSCopying, kMYEMAIL as NSCopying, kMYMESSAGE as NSCopying, kMYSUBJECT as NSCopying])
 }
 
 //MARK: - Update Order

@@ -86,7 +86,7 @@ class ItemViewController: UIViewController {
                     self.createNewBasket()
                 } else {
                     basket!.itemIds.append(self.item.id)
-                    self.updateBasket(basket: basket!, withValues: [kITEMIDS : basket!.itemIds])
+                    self.updateBasket(basket: basket!, withValues: [kITEMIDS : basket!.itemIds!])
                 }
             }
 

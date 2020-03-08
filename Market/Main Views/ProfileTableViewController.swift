@@ -15,6 +15,13 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var finishRegistrationButtonOutlet: UIButton!
     @IBOutlet weak var purchaseHistoryButtonOutlet: UIButton!
     
+    @IBAction func privacyPolicyButton(_ sender: Any) {
+        
+        UIApplication.shared.open(URL(string: "https://nextdoormunch.com/privacy-policy")! as URL, options: [:], completionHandler: nil)
+        
+    }
+    
+    
     //MARK: - Vars
     var editBarButtonOutlet: UIBarButtonItem!
 
@@ -56,7 +63,7 @@ class ProfileTableViewController: UITableViewController {
     //MARK: - Helpers
     
     private func checkOnboardingStatus() {
-        print("....\(MUser.currentUser())")
+        print("....\(String(describing: MUser.currentUser()))")
         if MUser.currentUser() != nil {
             
             if MUser.currentUser()!.onBoard {

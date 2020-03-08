@@ -73,7 +73,7 @@ class CategoryCollectionViewController: UICollectionViewController {
         if segue.identifier == "categoryToItemsSeg" {
             
             let vc = segue.destination as! ItemsTableViewController
-            vc.category = sender as! Category
+            vc.category = sender as? Category
         }
     }
 }
