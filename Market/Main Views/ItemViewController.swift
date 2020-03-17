@@ -18,6 +18,27 @@ class ItemViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     
+    @IBAction func addBasketButton(_ sender: Any) {
+        
+        
+        if MUser.currentUser() != nil {
+            
+            downloadBasketFromFirestore(MUser.currentId()) { (basket) in
+
+                if basket == nil {
+                    self.createNewBasket()
+                } else {
+                    basket!.itemIds.append(self.item.id)
+                    self.updateBasket(basket: basket!, withValues: [kITEMIDS : basket!.itemIds!])
+                }
+            }
+
+        } else {
+            showLoginView()
+        }
+        
+        
+    }
     //MARK: - Vars
     var item: Item!
     var itemImages: [UIImage] = []

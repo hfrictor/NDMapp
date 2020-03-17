@@ -197,7 +197,7 @@ class BasketViewController: UIViewController {
     
     private func checkoutButtonStatusUpdate() {
         
-        checkOutButtonOutlet.isEnabled = allItems.count > 0
+        checkOutButtonOutlet.isEnabled = allItems.count > 3
         
         if checkOutButtonOutlet.isEnabled {
             checkOutButtonOutlet.backgroundColor = #colorLiteral(red: 0.9771573604, green: 0.465426337, blue: 0.1832221476, alpha: 1)
