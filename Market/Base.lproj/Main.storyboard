@@ -467,11 +467,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="oOZ-9b-eKh">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xiR-rb-qXg">
-                            <connections>
-                                <segue destination="X6y-u7-Sso" kind="show" identifier="itemToAddItemSeg" id="sgd-Q6-6ef"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xiR-rb-qXg"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRX-Qr-Jhj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -487,12 +483,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P4e-Xw-jg6">
-                                <rect key="frame" x="20" y="110" width="335" height="34"/>
+                                <rect key="frame" x="20" y="66" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BD8-24-AxN">
-                                <rect key="frame" x="20" y="152" width="335" height="34"/>
+                                <rect key="frame" x="20" y="108" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>

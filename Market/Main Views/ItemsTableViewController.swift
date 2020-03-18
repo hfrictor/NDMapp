@@ -65,13 +65,15 @@ class ItemsTableViewController: UITableViewController {
 
     // MARK: - Navigation
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "itemToAddItemSeg" {
+    // Took this code out to take away the add products button i also disabled the segue
+    
+    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //if segue.identifier == "itemToAddItemSeg" {
             
-            let vc = segue.destination as! AddItemViewController
-            vc.category = category!
-        }
-    }
+            //let vc = segue.destination as! AddItemViewController
+            //vc.category = category!
+        //}
+    //}
     
     private func showItemView(_ item: Item) {
         
