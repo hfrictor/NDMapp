@@ -211,7 +211,6 @@
 				D6FB853CF0E41723768D4E92 /* Pods-Market.debug.xcconfig */,
 				A5F6FD36F8079FF3FDE837B1 /* Pods-Market.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -514,7 +513,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hayden868686.nextdoormunch;
 				PRODUCT_NAME = NextDoorMunch;
 				SWIFT_OBJC_BRIDGING_HEADER = "Market/Main Views/Market-Bridging-Header.h";
@@ -538,7 +537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hayden868686.nextdoormunch;
 				PRODUCT_NAME = NextDoorMunch;
 				SWIFT_OBJC_BRIDGING_HEADER = "Market/Main Views/Market-Bridging-Header.h";
