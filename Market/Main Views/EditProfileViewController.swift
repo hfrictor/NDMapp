@@ -89,7 +89,7 @@ class EditProfileViewController: UIViewController {
             surnameTextField.text = currentUser.lastName
             addressTextField.text = currentUser.fullAddress
             phoneNumberTextField.text = currentUser.phoneNumber
-            //zipCodeTextField.text = currentUser.zipCode
+            zipCodeTextField.text = currentUser.zipCode
         }
     }
 

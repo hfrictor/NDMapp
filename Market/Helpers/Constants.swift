@@ -63,5 +63,8 @@ public let kMYEMAIL = "to"
 public let kMYMESSAGE = "message"
 public let kMYSUBJECT = "subject"
 
+//Orders
+public let kISCOMPLETED = "isCompleted"
+
 
 

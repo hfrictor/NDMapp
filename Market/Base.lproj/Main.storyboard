@@ -276,17 +276,15 @@
                                     <action selector="checkoutButtonPressed:" destination="bfS-gK-l08" eventType="touchUpInside" id="LBM-zz-7wa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Must have 4 Items to checkout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zJ-CO-0Xa">
-                                <rect key="frame" x="253" y="704" width="122" height="10"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$15.00 Min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbO-jA-tkB">
+                                <rect key="frame" x="16" y="701" width="72" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.97715736040000001" green="0.46542633700000002" blue="0.1832221476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Must have 4 Items to checkout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbO-jA-tkB">
-                                <rect key="frame" x="0.0" y="704" width="122" height="10"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$15.00 Min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zJ-CO-0Xa">
+                                <rect key="frame" x="287" y="701" width="72" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.97715736040000001" green="0.46542633700000002" blue="0.1832221476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -294,8 +292,10 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Zzl-Cf-2mU" firstAttribute="trailing" secondItem="sNG-EK-ERm" secondAttribute="trailing" constant="16" id="7RI-kR-t4l"/>
+                            <constraint firstItem="7zJ-CO-0Xa" firstAttribute="top" secondItem="sCn-YD-5Rx" secondAttribute="bottom" constant="12" id="BOr-gy-1mA"/>
                             <constraint firstItem="97L-uX-tNn" firstAttribute="top" secondItem="Zzl-Cf-2mU" secondAttribute="top" constant="15" id="F42-u9-14v"/>
                             <constraint firstItem="Pnb-0r-7gi" firstAttribute="top" secondItem="sCn-YD-5Rx" secondAttribute="bottom" constant="5" id="OBh-71-r5l"/>
+                            <constraint firstItem="bbO-jA-tkB" firstAttribute="leading" secondItem="Zzl-Cf-2mU" secondAttribute="leading" constant="16" id="SMS-bl-Oeq"/>
                             <constraint firstItem="Zzl-Cf-2mU" firstAttribute="bottom" secondItem="Pnb-0r-7gi" secondAttribute="bottom" constant="5" id="XaM-Ce-ECV"/>
                             <constraint firstItem="sNG-EK-ERm" firstAttribute="top" secondItem="Zzl-Cf-2mU" secondAttribute="top" constant="15" id="Zf7-Cc-O6i"/>
                             <constraint firstItem="sCn-YD-5Rx" firstAttribute="leading" secondItem="Zzl-Cf-2mU" secondAttribute="leading" id="Zft-Ca-Ygf"/>
@@ -303,8 +303,11 @@
                             <constraint firstItem="97L-uX-tNn" firstAttribute="leading" secondItem="Zzl-Cf-2mU" secondAttribute="leading" constant="16" id="gra-QY-cxI"/>
                             <constraint firstItem="Pnb-0r-7gi" firstAttribute="leading" secondItem="Zzl-Cf-2mU" secondAttribute="leading" id="iV0-ti-eqF"/>
                             <constraint firstItem="sCn-YD-5Rx" firstAttribute="top" secondItem="97L-uX-tNn" secondAttribute="bottom" constant="8" id="jp3-Ex-tX4"/>
+                            <constraint firstItem="bbO-jA-tkB" firstAttribute="top" secondItem="sCn-YD-5Rx" secondAttribute="bottom" constant="12" id="juo-rZ-Jet"/>
                             <constraint firstItem="Pnb-0r-7gi" firstAttribute="trailing" secondItem="Zzl-Cf-2mU" secondAttribute="trailing" id="n9Y-g6-6Ua"/>
                             <constraint firstItem="sCn-YD-5Rx" firstAttribute="trailing" secondItem="Zzl-Cf-2mU" secondAttribute="trailing" id="sbv-UR-GVd"/>
+                            <constraint firstItem="7zJ-CO-0Xa" firstAttribute="leading" secondItem="bbO-jA-tkB" secondAttribute="trailing" constant="199" id="ttk-ud-QW1"/>
+                            <constraint firstItem="Zzl-Cf-2mU" firstAttribute="trailing" secondItem="7zJ-CO-0Xa" secondAttribute="trailing" constant="16" id="vIO-vS-TBo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zzl-Cf-2mU"/>
                     </view>

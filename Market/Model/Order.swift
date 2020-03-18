@@ -21,6 +21,7 @@ class Order {
     var myEmail: String!
     var myMessage: String!
     var mySubject: String!
+    var isCompleted: Bool!
     
     init() {
     }
@@ -36,6 +37,7 @@ class Order {
         myEmail = _dictionary[kMYEMAIL] as? String
         myMessage = _dictionary[kMYMESSAGE] as? String
         mySubject = _dictionary[kMYSUBJECT] as? String
+        isCompleted = _dictionary[kISCOMPLETED] as? Bool ?? false
     }
 }
 
@@ -72,7 +74,7 @@ func saveOrderToFirestore(_ order: Order) {
 
 func orderDictionaryFrom(_ order: Order) -> NSDictionary {
     
-    return NSDictionary(objects: [order.id!, order.ownerId!, order.itemIds!, order.name!, order.address!, order.zipCode ?? "00000", order.phoneNumber!, order.myEmail ?? "haydenfrea@gmail.com", order.myMessage!, order.mySubject!], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kITEMIDS as NSCopying, kFULLNAME as NSCopying, kFULLADDRESS as NSCopying, kZIPCODE as NSCopying, kPHONENUMBER as NSCopying, kMYEMAIL as NSCopying, kMYMESSAGE as NSCopying, kMYSUBJECT as NSCopying])
+    return NSDictionary(objects: [order.id!, order.ownerId!, order.itemIds!, order.name!, order.address!, order.zipCode ?? "0000" , order.phoneNumber!, order.myEmail ?? "haydenfrea@gmail.com", order.myMessage!, order.mySubject!, order.isCompleted!], forKeys: [kOBJECTID as NSCopying, kOWNERID as NSCopying, kITEMIDS as NSCopying, kFULLNAME as NSCopying, kFULLADDRESS as NSCopying, kZIPCODE as NSCopying, kPHONENUMBER as NSCopying, kMYEMAIL as NSCopying, kMYMESSAGE as NSCopying, kMYSUBJECT as NSCopying, kISCOMPLETED as NSCopying])
 }
 
 //MARK: - Update Order

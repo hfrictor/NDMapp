@@ -29,6 +29,7 @@ class BasketViewController: UIViewController {
     var orderEmail: String = "nextdoormunch@gmail.com"
     var orderMessage: String = "Hello there from NextDoorMunch"
     var orderSubject: String = "ORDER NEEDS FILLED"
+    var isCompleted: Bool = false
     //let currentUser = MUser.currentUser()!
         
     let hud = JGProgressHUD(style: .dark)
@@ -113,6 +114,17 @@ class BasketViewController: UIViewController {
         return "Total price: " + convertToCurrency(totalPrice)
     }
     
+    private func returnTotalPrice() -> Double {
+        
+        var totalPrice = 0.0
+        
+        for item in allItems {
+            totalPrice += item.price
+        }
+        
+        return totalPrice
+    }
+    
     
     private func emptyTheBasket() {
         
@@ -181,6 +193,7 @@ class BasketViewController: UIViewController {
             newOrder.myEmail = orderEmail
             newOrder.myMessage = orderMessage
             newOrder.mySubject = orderSubject
+            newOrder.isCompleted = isCompleted
             saveOrderToFirestore(newOrder)
        
         }
@@ -197,7 +210,10 @@ class BasketViewController: UIViewController {
     
     private func checkoutButtonStatusUpdate() {
         
-        checkOutButtonOutlet.isEnabled = allItems.count > 3
+        returnTotalPrice()
+        //checkOutButtonOutlet.isEnabled = return > 3
+        checkOutButtonOutlet.isEnabled = returnTotalPrice() > 15.0
+        print(returnTotalPrice())
         
         if checkOutButtonOutlet.isEnabled {
             checkOutButtonOutlet.backgroundColor = #colorLiteral(red: 0.9771573604, green: 0.465426337, blue: 0.1832221476, alpha: 1)
