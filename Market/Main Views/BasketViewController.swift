@@ -33,7 +33,7 @@ class BasketViewController: UIViewController {
     //let currentUser = MUser.currentUser()!
         
     let hud = JGProgressHUD(style: .dark)
-    var totalPrice = 0
+    var totalPrice = 7
     
     
     //MARK: - View Lifecycle
@@ -96,7 +96,7 @@ class BasketViewController: UIViewController {
             totalItemsLabel.text = "0"
             basketTotalPriceLabel.text = returnBasketTotalPrice()
         } else {
-            totalItemsLabel.text = "\(allItems.count)"
+            totalItemsLabel.text = "\(allItems.count) + $7.00 Delivery"
             basketTotalPriceLabel.text = returnBasketTotalPrice()
         }
         
@@ -105,7 +105,7 @@ class BasketViewController: UIViewController {
     
     private func returnBasketTotalPrice() -> String {
         
-        var totalPrice = 0.0
+        var totalPrice = 7.0
         
         for item in allItems {
             totalPrice += item.price
@@ -116,7 +116,7 @@ class BasketViewController: UIViewController {
     
     private func returnTotalPrice() -> Double {
         
-        var totalPrice = 0.0
+        var totalPrice = 7.0
         
         for item in allItems {
             totalPrice += item.price
